@@ -12,7 +12,7 @@ from sklearn.utils import shuffle
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
-    st.title("👨🏾‍⚕️ Is the Patient at HIgh Risk of Suffering a Stroke?")
+    st.title("👨🏾‍⚕️ Is the patient at high risk of suffering a stroke?")
     st.sidebar.title("Hyperparameter Tuning🔧")
     st.markdown(
     """
@@ -112,7 +112,7 @@ def main():
     
     if classifier == 'Support Vector Machine (SVM)':
         st.sidebar.subheader("Set Hyperparameters")
-        C = st.sidebar.number_input("L2 regularization parameter", 0.001,1000.0,step=0.01,key="C")
+        C = st.sidebar.number_input("Regularization strength", 0.001,1000.0,step=0.01,key="C")
         kernel = st.sidebar.radio("Kernel", ("linear","poly","rbf","sigmoid"), key="kernel")
         gamma = st.sidebar.radio("Gamma (Kernel Coefficient)", ("scale","auto"), key='gamma')
 
@@ -131,7 +131,7 @@ def main():
 
     if classifier == "Logistic Regression":
         st.sidebar.subheader("Model Hyperparameters")
-        C = st.sidebar.number_input("L2 regularization parameter", 0.001,1000.0,step=0.01,key="C_LR")
+        C = st.sidebar.number_input("L2 regularization strength", 0.001,1000.0,step=0.01,key="C_LR")
         max_iter = st.sidebar.slider("Maximum Iterations", 100, 500, key="max_iter")
 
         metrics = st.sidebar.multiselect("What metrics would you like to plot?", ('Confusion Matrix', 'Precision-Recall Curve', 'ROC Curve'))
