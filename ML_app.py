@@ -12,7 +12,7 @@ from sklearn.utils import shuffle
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
-    st.title("👨🏾‍⚕️ Is the patient at high risk of suffering a stroke?")
+    st.title("👨🏾‍⚕️ Is the Patient at High Risk of Suffering a Stroke?")
     st.sidebar.title("Hyperparameter Tuning🔧")
     st.markdown(
     """
@@ -114,7 +114,7 @@ def main():
         st.sidebar.subheader("Set Hyperparameters")
         C = st.sidebar.number_input("Regularization strength", 0.001,1000.0,step=0.01,key="C")
         kernel = st.sidebar.radio("Kernel", ("linear","poly","rbf","sigmoid"), key="kernel")
-        gamma = st.sidebar.radio("Gamma (Kernel Coefficient)", ("scale","auto"), key='gamma')
+        gamma = st.sidebar.radio("Gamma (Kernel coefficient)", ("scale","auto"), key='gamma')
 
         metrics = st.sidebar.multiselect("What metrics would you like to plot?", ('Confusion Matrix', 'Precision-Recall Curve', 'ROC Curve'))
 
