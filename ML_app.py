@@ -12,7 +12,7 @@ from sklearn.utils import shuffle
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
-    st.title("👨🏾‍⚕️ Is the Patient at HIgh Risk of Having a Stroke?")
+    st.title("👨🏾‍⚕️ Is the Patient at HIgh Risk of Suffering a Stroke?")
     st.sidebar.title("Hyperparameter Tuning🔧")
     st.markdown(
     """
